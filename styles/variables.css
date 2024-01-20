@@ -3,12 +3,12 @@
 :root {
   --font-main: 'Inter-Variable', sans-serif;
   --font-accent: 'PressStart2P', sans-serif;
-  --font-weight-text: 400;
-  --font-weight-header: 700;
+  --font-weight-text: "wght" 400;
+  --font-weight-header: "wght" 700;
   --font-size-main: 18px;
   --font-size-small: 14px;
-  --Themes-background: #FFFFFF;
-  --Themes-mainColor: #000000;
+  --background-color: #FFFFFF;
+  --accent-color: #000000;
   --gradient-main: #d3d3d3;
   --gradient-accent: rgb(211 211 211 / 0);
   --gradient-light: #e7e7e7;

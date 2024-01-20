@@ -5,42 +5,15 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-.page.theme_light {
-  --font-main: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P', sans-serif;
-  --font-weight-text: 400;
-  --font-weight-header: 700;
-  --font-size-main: 18px;
-  --font-size-small: 14px;
-  --Themes-background: #FFFFFF;
-  --Themes-mainColor: #000000;
-  --gradient-main: #d3d3d3;
-  --gradient-accent: rgb(211 211 211 / 0);
-  --gradient-light: #e7e7e7;
-  --gradient-dark: #1a1a1a;
-  --background-image: 
-    repeating-linear-gradient(90deg, var(--gradient-main) 0px 2px, var(--gradient-accent) 2px 4px),
-    repeating-linear-gradient(180deg, var(--gradient-main) 0px 2px, var(--gradient-accent) 2px 4px), 
-    linear-gradient(var(--gradient-light) 0.01%, var(--gradient-dark) 100%);
-  --adaptive-width: clamp(min(100vw, 371px), 74vw, 696px);
-  --button-text: #FFFFFF;
-  --heart-contour-color: #1a1a1a;
-  --heart-sparks-color: red;
-  --heart-main-body-color: red;
-  --heart-core-color: red;
-  --heart-contour-liked: red;
-}
-
 :root.theme-light {
-  /* Дублируем переменные для светлой темы */
   --font-main: 'Inter-Variable', sans-serif;
   --font-accent: 'PressStart2P', sans-serif;
   --font-weight-text: 400;
   --font-weight-header: 700;
   --font-size-main: 18px;
   --font-size-small: 14px;
-  --Themes-background: #FFFFFF;
-  --Themes-mainColor: #000000;
+  --background-color: #FFFFFF;
+  --accent-color: #000000;
   --gradient-main: #d3d3d3;
   --gradient-accent: rgb(211 211 211 / 0);
   --gradient-light: #e7e7e7;
@@ -52,33 +25,6 @@
   --adaptive-width: clamp(min(100vw, 371px), 74vw, 696px);
   --button-text: #FFFFFF;
   --heart-contour-color: #1a1a1a;
-  --heart-sparks-color: red;
-  --heart-main-body-color: red;
-  --heart-core-color: red;
-  --heart-contour-liked: red;
-}
-
-
-.page.theme_dark {
-  --font-main: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P', sans-serif;
-  --font-weight-text: 465;
-  --font-weight-header: 785;
-  --font-size-main: 18px;
-  --font-size-small: 14px;
-  --Themes-background: #000000;
-  --Themes-mainColor: #00CC14;
-  --gradient-main: #000;
-  --gradient-accent: rgb(211 211 211 / 0);
-  --gradient-light: #007f0c;
-  --gradient-dark: #004306;
-  --background-image: 
-    repeating-linear-gradient(90deg, var(--gradient-main) 0px 2px, var(--gradient-accent) 2px 4px),
-    repeating-linear-gradient(180deg, var(--gradient-main) 0px 2px, var(--gradient-accent) 2px 4px), 
-    linear-gradient(var(--gradient-light) 0.01%, var(--gradient-dark) 100%);
-  --adaptive-width: clamp(min(100vw, 371px), 74vw, 696px);
-  --button-text: #00CC14;
-  --heart-contour-color: #00CC14;
   --heart-sparks-color: red;
   --heart-main-body-color: red;
   --heart-core-color: red;
@@ -86,15 +32,14 @@
 }
 
 :root.theme-dark {
-  /* Дублируем переменные для тёмной темы */
   --font-main: 'Inter-Variable', sans-serif;
   --font-accent: 'PressStart2P', sans-serif;
   --font-weight-text: 465;
   --font-weight-header: 785;
   --font-size-main: 18px;
   --font-size-small: 14px;
-  --Themes-background: #000000;
-  --Themes-mainColor: #00CC14;
+  --background-color: #000000;
+  --accent-color: #00CC14;
   --gradient-main: #000;
   --gradient-accent: rgb(211 211 211 / 0);
   --gradient-light: #007f0c;
@@ -113,7 +58,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  /* Дублируем переменные для светлой темы */
+  /* Дублируем переменные для темной темы */
   :root {
     --font-main: 'Inter-Variable', sans-serif;
     --font-accent: 'PressStart2P', sans-serif;
@@ -121,13 +66,13 @@
     --font-weight-header: 785;
     --font-size-main: 18px;
     --font-size-small: 14px;
-    --Themes-background: #000000;
-    --Themes-mainColor: #00CC14;
+    --background-color: #000000;
+    --accent-color: #00CC14;
     --gradient-main: #000;
     --gradient-accent: rgb(211 211 211 / 0);
     --gradient-light: #007f0c;
     --gradient-dark: #004306;
-    --background-image: 
+    --background-image:
       repeating-linear-gradient(90deg, var(--gradient-main) 0px 2px, var(--gradient-accent) 2px 4px),
       repeating-linear-gradient(180deg, var(--gradient-main) 0px 2px, var(--gradient-accent) 2px 4px), 
       linear-gradient(var(--gradient-light) 0.01%, var(--gradient-dark) 100%);
@@ -140,7 +85,5 @@
     --heart-contour-liked: red;
   }
 }
-
-
 
 /* Остальные стили */
