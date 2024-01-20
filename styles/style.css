@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   color: var(--Themes-mainColor, #000000);
-  font-family: var(--font-main, sans-serif);
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   background-color: var(--Themes-background, #ffffff);
   background-image: var(--background-image);
@@ -29,7 +29,12 @@
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wdth" var(--font-weight-text, 400);
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+      font-family: var(----font-main, 'Inter-Variable');
+  }
 }
 
 .header {
