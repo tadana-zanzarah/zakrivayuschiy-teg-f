@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   color: var(--Themes-mainColor, #000000);
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-main, "Inter-Variable");
   font-weight: 400;
   font-size: 14px;
   background-color: var(--Themes-background, #ffffff);
@@ -30,14 +30,15 @@
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" 400;
 }
 
-@supports (font-variation-settings: normal) {
+/* @supports (font-variation-settings: normal) {
   .page {
-    font-family: var(----font-main, "Inter-Variable");
+    font-family: var(--font-main, "Inter-Variable");
     font-variation-settings: "wght" 400;
   }
-}
+} */
 
 .header {
   display: flex;
