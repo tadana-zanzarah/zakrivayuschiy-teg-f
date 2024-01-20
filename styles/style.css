@@ -20,7 +20,8 @@
   justify-content: center;
   align-items: center;
   color: var(--Themes-mainColor, #000000);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   background-color: var(--Themes-background, #ffffff);
   background-image: var(--background-image);
@@ -32,8 +33,9 @@
 }
 
 @supports (font-variation-settings: normal) {
-  body {
-      font-family: var(----font-main, 'Inter-Variable');
+  .page {
+    font-family: var(----font-main, "Inter-Variable");
+    font-variation-settings: "wght" 400;
   }
 }
 
