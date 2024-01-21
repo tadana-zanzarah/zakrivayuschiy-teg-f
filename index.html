@@ -29,7 +29,10 @@
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">Темно</button>
+            <button type="button" 
+            data-theme="dark" 
+            class="theme-menu__button"
+            >Темно</button>
           </li>
           <li class="theme-menu__item">
             <button
@@ -40,7 +43,11 @@
             >Авто</button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">Светло</button>
+            <button 
+            type="button" 
+            data-theme="light" 
+            class="theme-menu__button"
+            >Светло</button>
           </li>
         </ul>
       </nav>
@@ -303,6 +310,20 @@
           </div>
         </div>
       </article>
+
+      <button 
+        type="button" 
+        onclick="window['dialog-id'].showModal()" 
+        aria-controls="dialog-id"
+        class="button_save button_common border bg-fill focus-shadow"
+      >
+        <svg class="button_save_floppy" viewBox="0 0 39 39">
+          <use href="/svg/floppy.svg#floppy" />
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+
+
     </main>
 
 
@@ -322,19 +343,6 @@
         </button>
       </form>
     </dialog>
-
-    
-    <button 
-      type="button" 
-      onclick="window['dialog-id'].showModal()" 
-      aria-controls="dialog-id"
-      class="button_save button_common border bg-fill focus-shadow"
-    >
-      <svg class="button_save_floppy" viewBox="0 0 39 39">
-        <use href="/svg/floppy.svg#floppy" />
-      </svg>
-      <span class="button__text">Сохранить на память</span>
-    </button>
 
 
     <script src="./scripts/like.js"></script>

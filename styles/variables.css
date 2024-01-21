@@ -2,7 +2,7 @@
 
 :root {
   --font-main: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P', sans-serif;
+  --font-accent: 'PressStart2P', 'fantasy', sans-serif;
   --font-weight-text: "wght" 400;
   --font-weight-header: "wght" 700;
   --font-size-main: 18px;

@@ -44,7 +44,6 @@
   padding-block-start: clamp(120px, 10.16%, 136px);
   padding-block-end: 25px;
   background: var(--background-color, #ffffff);
-  /* block-size: clamp(323px, 43vh, 364px); */
 }
 
 .adaptive-width {
@@ -122,11 +121,11 @@
 .theme-menu__button:after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -3px 0;
   border-bottom: 2px solid var(--accent-color, #000000);
   transition: transform 0.3s linear;
   transform: scaleX(0);
-  transform-origin: left bottom;
+  transform-origin: left center;
 }
 
 .theme-menu__button:focus::after {
@@ -137,8 +136,9 @@
   outline: none;
 }
 
-.theme-menu__button:active {
-  opacity: 0.6;
+.theme-menu__button:active::after {
+  border-bottom: none;
+  transform: scaleX(0);
 }
 
 .main_content {
@@ -158,7 +158,6 @@
   padding: 3px 10px;
   font-size: var(--font-size-main, 18px);
   font-variation-settings: "wght" var(--font-weight-header, 700);
-  letter-spacing: 0.01rem; /*ручная подгонка под макет*/
 }
 
 .card_image-container {
@@ -195,10 +194,10 @@
 }
 
 .card_image {
-  block-size: 100%;
-  inline-size: 100%;
   object-fit: cover;
   object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .filter_contrast {
@@ -245,7 +244,6 @@
   font-style: normal;
   line-height: 116.67%;
   font-variation-settings: "wght" var(--font-weight-text, 400);
-  letter-spacing: 0.037rem; /*ручная подгонка под макет*/
 }
 
 .card_button {
@@ -372,25 +370,35 @@
 }
 
 .button_save {
-  display: flex;
+  display: grid;
+  grid-template-columns: 21px 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin: 54px auto 105px;
-  inline-size: clamp(306px, 52vw, 335px);
-  block-size: 51px;
+  margin-block-end: 105px;
+  padding-block: 13.5px;
 }
 
 @media (width <= 376px) {
   .button_save {
-    flex-direction: column;
-    block-size: 80px;
+    grid-template-columns: 1fr;
+    padding-block: 15px;
   }
 }
 
 .button_save_floppy {
+  justify-self: center;
+  align-self: center;
   color: var(--button-text, #ffffff);
+  mix-blend-mode: difference;
   inline-size: 21px;
   block-size: 21px;
-  mix-blend-mode: difference;
+}
+
+@media (width <= 376px) {
+  .button_save_floppy {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
