@@ -118,7 +118,7 @@
 }
 
 .theme-menu__button:after {
-  content: '';
+  content: "";
   display: block;
   width: 0%;
   height: 2px;
@@ -127,7 +127,7 @@
 }
 
 .theme-menu__button:focus::after {
-  width: 100%;  
+  width: 100%;
 }
 
 .theme-menu__button:focus-visible {
