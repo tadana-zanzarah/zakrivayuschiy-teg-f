@@ -79,7 +79,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
   padding-inline-start: 15px;
 }
 
