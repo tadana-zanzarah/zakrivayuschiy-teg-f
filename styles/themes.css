@@ -7,9 +7,9 @@
 
 :root.theme-light {
   --font-main: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P', sans-serif;
-  --font-weight-text: 400;
-  --font-weight-header: 700;
+  --font-accent: 'PressStart2P', 'fantasy', sans-serif;
+  --font-weight-main: 400;
+  --font-weight-accent: 700;
   --font-size-main: 18px;
   --font-size-small: 14px;
   --background-color: #FFFFFF;
@@ -33,9 +33,9 @@
 
 :root.theme-dark {
   --font-main: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P', sans-serif;
-  --font-weight-text: 465;
-  --font-weight-header: 785;
+  --font-accent: 'PressStart2P', 'fantasy', sans-serif;
+  --font-weight-main: 465;
+  --font-weight-accent: 785;
   --font-size-main: 18px;
   --font-size-small: 14px;
   --background-color: #000000;
@@ -61,9 +61,9 @@
   /* Дублируем переменные для темной темы */
   :root {
     --font-main: 'Inter-Variable', sans-serif;
-    --font-accent: 'PressStart2P', sans-serif;
-    --font-weight-text: 465;
-    --font-weight-header: 785;
+    --font-accent: 'PressStart2P', 'fantasy', sans-serif;
+    --font-weight-main: 465;
+    --font-weight-accent: 785;
     --font-size-main: 18px;
     --font-size-small: 14px;
     --background-color: #000000;
@@ -86,4 +86,3 @@
   }
 }
 
-/* Остальные стили */

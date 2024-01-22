@@ -20,8 +20,8 @@
   justify-content: center;
   align-items: center;
   color: var(--accent-color, #000000);
-  font-family: var(--font-main, "Inter-Variable");
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-weight: var(--font-weight-main, 400);
   font-size: var(--font-size-small, 14px);
   background-color: var(--background-color, #ffffff);
   background-image: var(--background-image);
@@ -31,7 +31,13 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--font-weight-text, 400);
+  font-variation-settings: "wght" var(--font-weight-main, 400);
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--font-main), "Inter-Variable", sans-serif;
+  }
 }
 
 .header {
@@ -154,7 +160,7 @@
 .card_title {
   padding: 3px 10px;
   font-size: var(--font-size-main, 18px);
-  font-variation-settings: "wght" var(--font-weight-header, 700);
+  font-variation-settings: "wght" var(--font-weight-accent, 700);
 }
 
 .card_image-container {
@@ -240,7 +246,7 @@
   font-size: var(--font-size-main, 18px);
   font-style: normal;
   line-height: 116.67%;
-  font-variation-settings: "wght" var(--font-weight-text, 400);
+  font-variation-settings: "wght" var(--font-weight-main, 400);
 }
 
 .card_button {
